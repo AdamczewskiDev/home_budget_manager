@@ -1,0 +1,20 @@
+{
+  "name": "Home Budget Manager",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "3.10"
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "postCreateCommand": "make setup",
+  "forwardPorts": [
+    5000
+  ],
+  "remoteUser": "vscode"
+}
